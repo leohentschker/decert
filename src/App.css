@@ -1,0 +1,57 @@
+/* navbar styles */
+.navbar {
+  height: 30px;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 10px;
+}
+
+.navbar .navbar-brand {
+  font-size: 30px;
+}
+
+.nav-list {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.nav-link {
+  text-decoration: none;
+}
+
+.nav-link.active {
+  border-bottom: solid 1px white;
+}
+
+#top-bar .nav-item a {
+  margin: 20px;
+  color: #EABE7C;
+}
+
+.navbar-brand {
+  color: #EABE7C;
+}
+
+#top-bar {
+  background-color: #fafafa;
+  border: none;
+  background: none;
+}
+
+.material-shadow {
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.navbar-toggle .icon-bar {
+  background: #EABE7C;
+}
+
+.navbar-collapse.collapse.in {
+  background: #fafafa;
+}
+
+/* microlink styles */
+.microlink_card {
+  max-width: 10000px;
+}

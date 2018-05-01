@@ -1,0 +1,148 @@
+/* page styles */
+html, body, #root, main {
+  top: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  background: #fafafa;
+  color: #EABE7C;
+}
+
+/* make all links same color */
+a {
+  color: #656256;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.invalid {
+  cursor: not-allowed;
+}
+
+/* flex styles */
+.flex {
+  display: flex;
+}
+
+.flex1 {
+  flex: 1;
+}
+
+.aligned-center {
+  align-items: center;
+}
+
+.justified-center {
+  justify-content: center;
+}
+
+.full-center {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.rows {
+  flex-direction: row;
+}
+
+.columns {
+  flex-direction: column;
+}
+
+/* paddings */
+.padding {
+  padding: 30px;
+}
+
+/* margins */
+.margin {
+  margin: 30px;
+}
+.margin-top {
+  margin-top: 30px;
+}
+
+.margin-right {
+  margin-right: 30px;
+}
+
+.margin-right-small {
+  margin-right: 15px;
+}
+
+.margin-left {
+  margin-left: 30px;
+}
+
+.margin-left-small {
+  margin-left: 15px;
+}
+
+/* content styles */
+.page-container {
+  height: 100%;
+}
+.page-header {
+  margin: 30px;
+  text-align: center;
+}
+
+/* text styles */
+.text-center {
+  text-align: center;
+}
+
+.empty-text {
+  font-size: 30px;
+}
+
+.dark-text {
+  color: #333333;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.medium-font {
+  font-size: 20px;
+}
+
+.big-font {
+  font-size: 30px;
+}
+
+/* button styles */
+.submit-button {
+  background: #EA9010;
+  border-color: #EA9010;
+}
+
+.submit-button:hover {
+  background: #EABE7C;
+  border-color: #EABE7C;
+}
+
+.submit-button:active {
+  background: #EABE7C;
+  border-color: #EABE7C;
+}
+
+/* float alignment */
+.float-right {
+  float: right;
+}
+
+/* image styles */
+.meme-detail-image {
+  height: 50vh;
+}
+
+.swal2-popup {
+  font-size: 1.6rem !important;
+}
