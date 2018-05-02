@@ -61,6 +61,7 @@ export default class MemeDetail extends Component {
           className="material-shadow padding"
           style={{
             background: "white",
+            maxWidth: 800,
           }}
         >
           <div className="full-width full-center margin-top">

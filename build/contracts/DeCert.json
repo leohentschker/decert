@@ -6871,7 +6871,196 @@
     "name": "solc",
     "version": "0.4.18+commit.9cf6e910.Emscripten.clang"
   },
-  "networks": {},
+  "networks": {
+    "3": {
+      "events": {
+        "0x944947cdd5d42fdc8afac2fbc47fb5f7251d7b8d279a41d8141e2c46a61b47c8": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "issuer",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "validityStart",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "validityEnd",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "serialID",
+              "type": "uint256"
+            }
+          ],
+          "name": "CertificateAdded",
+          "type": "event"
+        },
+        "0xba46d2d4a58f2731a88b82c14eff14cb9cb20c392748d471b1b9c7e56993b1cb": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "voter",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "issuer",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "serialID",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "valid",
+              "type": "bool"
+            },
+            {
+              "indexed": false,
+              "name": "votes",
+              "type": "uint256"
+            }
+          ],
+          "name": "NewVote",
+          "type": "event"
+        },
+        "0xdf7fc143d886e00f490c1e53e68812e6bd49fc1a78485bbc2b04b6e7397ffd79": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "debug",
+              "type": "string"
+            }
+          ],
+          "name": "A",
+          "type": "event"
+        },
+        "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "previousOwner",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "name": "newOwner",
+              "type": "address"
+            }
+          ],
+          "name": "OwnershipTransferred",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x50554fbe36eca29ae4a2910a920ff9dd2b415a4d"
+    },
+    "1525216404695": {
+      "events": {
+        "0x944947cdd5d42fdc8afac2fbc47fb5f7251d7b8d279a41d8141e2c46a61b47c8": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "issuer",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "validityStart",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "validityEnd",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "serialID",
+              "type": "uint256"
+            }
+          ],
+          "name": "CertificateAdded",
+          "type": "event"
+        },
+        "0xba46d2d4a58f2731a88b82c14eff14cb9cb20c392748d471b1b9c7e56993b1cb": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "voter",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "issuer",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "serialID",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "valid",
+              "type": "bool"
+            },
+            {
+              "indexed": false,
+              "name": "votes",
+              "type": "uint256"
+            }
+          ],
+          "name": "NewVote",
+          "type": "event"
+        },
+        "0xdf7fc143d886e00f490c1e53e68812e6bd49fc1a78485bbc2b04b6e7397ffd79": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "debug",
+              "type": "string"
+            }
+          ],
+          "name": "A",
+          "type": "event"
+        },
+        "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "previousOwner",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "name": "newOwner",
+              "type": "address"
+            }
+          ],
+          "name": "OwnershipTransferred",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x3cacc6c25223eecb91b24c50bcada58c99bc8df8"
+    }
+  },
   "schemaVersion": "1.0.1",
-  "updatedAt": "2018-05-02T01:55:40.685Z"
+  "updatedAt": "2018-05-02T02:17:05.963Z"
 }
