@@ -12,13 +12,17 @@ const mnemonic = process.env.ETH_MNEMONIC
 
 const provider = new HDWalletProvider(mnemonic, infura_url)
 
+const INFURA_ADDRESS = "0x4557b1e0d982d270d16e232d0cf45928a5772834"
+
 const DeCert = contract(decertJSON)
 DeCert.setProvider(provider)
 
 var deCert
 
 DeCert.deployed()
-.then(i => deCert = i)
+.then(i => {
+  deCert = i
+})
 
 const express = require('express')
 const bodyParser = require('body-parser')
@@ -38,16 +42,16 @@ app.post('/add_cert',
     const serialID = req.body.serialID
     const duration = req.body.duration
 
-    console.log(deCert.address)
-    deCert.getCertificateByID(0)
-    .then(out => console.log(out))
-
-    res.send("ASDASD")
-    // deCert.addCertificate(domain, serialID, duration)
-    // .then(res.send("Certificate uploaded successfully"))
+    deCert.addCertificate(
+      domain,
+      serialID,
+      duration,
+      {
+        from: INFURA_ADDRESS,
+      }
+    )
   }
 )
 
 
 app.listen(port, () => console.log(`Running webserver on port: ${port}`))
-

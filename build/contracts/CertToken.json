@@ -452,7 +452,7 @@
       },
       {
         "attributes": {
-          "SourceUnit": 1316,
+          "SourceUnit": 1330,
           "absolutePath": "zeppelin-solidity/contracts/token/ERC20/MintableToken.sol",
           "file": "zeppelin-solidity/contracts/token/ERC20/MintableToken.sol",
           "scope": 70,
@@ -468,24 +468,24 @@
       {
         "attributes": {
           "contractDependencies": [
-            1049,
-            1145,
-            1188,
-            1220,
-            1315,
-            1561
+            1063,
+            1159,
+            1202,
+            1234,
+            1329,
+            1575
           ],
           "contractKind": "contract",
           "documentation": null,
           "fullyImplemented": true,
           "linearizedBaseContracts": [
             69,
-            1315,
-            1049,
-            1561,
-            1145,
-            1188,
-            1220
+            1329,
+            1063,
+            1575,
+            1159,
+            1202,
+            1234
           ],
           "name": "CertToken",
           "scope": 70
@@ -502,7 +502,7 @@
                 "attributes": {
                   "contractScope": null,
                   "name": "MintableToken",
-                  "referencedDeclaration": 1315,
+                  "referencedDeclaration": 1329,
                   "type": "contract MintableToken"
                 },
                 "id": 3,
@@ -853,7 +853,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 1295,
+                              "referencedDeclaration": 1309,
                               "type": "function (address,uint256) returns (bool)",
                               "value": "mint"
                             },
@@ -921,7 +921,7 @@
               "payable": false,
               "scope": 69,
               "stateMutability": "nonpayable",
-              "superFunction": 1415,
+              "superFunction": 1429,
               "visibility": "public"
             },
             "children": [
@@ -1098,7 +1098,7 @@
                                   "isPure": false,
                                   "lValueRequested": false,
                                   "member_name": "transferFrom",
-                                  "referencedDeclaration": 1415,
+                                  "referencedDeclaration": 1429,
                                   "type": "function (address,address,uint256) returns (bool)"
                                 },
                                 "children": [
@@ -1108,7 +1108,7 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 1599,
+                                      "referencedDeclaration": 1613,
                                       "type": "contract super CertToken",
                                       "value": "super"
                                     },
@@ -1251,7 +1251,7 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 1329,
+                                      "referencedDeclaration": 1343,
                                       "type": "mapping(address => mapping(address => uint256))",
                                       "value": "allowed"
                                     },
@@ -1313,7 +1313,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 1062,
+                                  "referencedDeclaration": 1076,
                                   "type": "mapping(address => uint256)",
                                   "value": "balances"
                                 },
@@ -1401,103 +1401,7 @@
     "name": "solc",
     "version": "0.4.18+commit.9cf6e910.Emscripten.clang"
   },
-  "networks": {
-    "3": {
-      "events": {},
-      "links": {},
-      "address": "0x689065ac51ca79c891f5b9292b5da15231858baa"
-    },
-    "1525216404695": {
-      "events": {
-        "0x0f6798a560793a54c3bcfe86a93cde1e73087d944c0ea20544137d4121396885": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "name": "to",
-              "type": "address"
-            },
-            {
-              "indexed": false,
-              "name": "amount",
-              "type": "uint256"
-            }
-          ],
-          "name": "Mint",
-          "type": "event"
-        },
-        "0xae5184fba832cb2b1f702aca6117b8d265eaf03ad33eb133f19dde0f5920fa08": {
-          "anonymous": false,
-          "inputs": [],
-          "name": "MintFinished",
-          "type": "event"
-        },
-        "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "name": "previousOwner",
-              "type": "address"
-            },
-            {
-              "indexed": true,
-              "name": "newOwner",
-              "type": "address"
-            }
-          ],
-          "name": "OwnershipTransferred",
-          "type": "event"
-        },
-        "0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "name": "owner",
-              "type": "address"
-            },
-            {
-              "indexed": true,
-              "name": "spender",
-              "type": "address"
-            },
-            {
-              "indexed": false,
-              "name": "value",
-              "type": "uint256"
-            }
-          ],
-          "name": "Approval",
-          "type": "event"
-        },
-        "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "name": "from",
-              "type": "address"
-            },
-            {
-              "indexed": true,
-              "name": "to",
-              "type": "address"
-            },
-            {
-              "indexed": false,
-              "name": "value",
-              "type": "uint256"
-            }
-          ],
-          "name": "Transfer",
-          "type": "event"
-        }
-      },
-      "links": {},
-      "address": "0x5807f704a201e0fbd2840c6289e9a884dc85914d"
-    }
-  },
+  "networks": {},
   "schemaVersion": "1.0.1",
-  "updatedAt": "2018-05-01T23:13:41.362Z"
+  "updatedAt": "2018-05-02T01:55:40.684Z"
 }

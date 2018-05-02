@@ -237,6 +237,7 @@ contract DeCert is Ownable {
         returns (
             address issuer,
             uint256 serialID,
+            string domain,
             uint256 validityStart,
             uint256 validityEnd,
             uint256 validVotes,
@@ -245,6 +246,7 @@ contract DeCert is Ownable {
     {
         Certificate memory cert = certificateMap[_issuer][_serialID];
         issuer = cert.issuer;
+        domain = cert.domain;
         validityStart = cert.validityStart;
         validityEnd = cert.validityEnd;
         serialID = cert.serialID;
@@ -260,6 +262,7 @@ contract DeCert is Ownable {
         returns (
             address issuer,
             uint256 serialID,
+            string domain,
             uint256 validityStart,
             uint256 validityEnd,
             uint256 validVotes,
@@ -268,6 +271,7 @@ contract DeCert is Ownable {
     {
         Certificate memory cert = certList[_certID];
         issuer = cert.issuer;
+        domain = cert.domain;
         validityStart = cert.validityStart;
         validityEnd = cert.validityEnd;
         serialID = cert.serialID;

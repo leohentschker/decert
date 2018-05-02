@@ -98,8 +98,8 @@ contract('DeCert', async (accounts) => {
     const votedCert = await dc.getCertificateByID(0)
 
     // check the vote totals
-    assert(votedCert[4].equals(10), "Incorrect valid votes")
-    assert(votedCert[5].equals(20), "Incorrect invalid votes")
+    assert(votedCert[5].equals(10), "Incorrect valid votes")
+    assert(votedCert[6].equals(20), "Incorrect invalid votes")
 
     // make sure we're storing the votes correctly
     const firstVote = await dc.getVote(0)
