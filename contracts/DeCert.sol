@@ -14,9 +14,6 @@ contract DeCert is Ownable {
         // who issued the certificate
         address issuer;
 
-        // who requested the certificate
-        address owner;
-
         // what are you requesting the certificate for
         string domain;
 
@@ -73,7 +70,6 @@ contract DeCert is Ownable {
      */
     event CertificateAdded(
         address issuer,
-        address owner,
         uint256 validityStart,
         uint256 validityEnd,
         uint256 serialID
@@ -118,11 +114,9 @@ contract DeCert is Ownable {
     }
 
     /// @dev Add a certificate to the chain
-    /// @param _owner who owns the cert
     /// @param _duration how long is the cert valid for
-    /// @param _serialID unique ID for the cert based on owner
+    /// @param _serialID unique ID for the cert based on issuer
     function addCertificate(
-        address _owner,
         string _domain,
         uint256 _serialID,
         uint256 _duration
@@ -131,7 +125,6 @@ contract DeCert is Ownable {
     {
         _addCertificate(
             msg.sender,
-            _owner,
             _domain,
             _duration,
             _serialID
@@ -140,7 +133,6 @@ contract DeCert is Ownable {
 
     function _addCertificate(
         address _issuer,
-        address _owner,
         string _domain,
         uint256 _duration,
         uint256 _serialID
@@ -148,7 +140,7 @@ contract DeCert is Ownable {
         internal
     {
         // ensure that the certificate wasn't already created
-        require (certificateMap[_issuer][_serialID].owner == address(0));
+        require (certificateMap[_issuer][_serialID].issuer == address(0));
 
         // calculate the certificate expiration
         uint256 expire = now + _duration;
@@ -156,7 +148,6 @@ contract DeCert is Ownable {
         // create the certificate
         Certificate memory cert = Certificate(
             _issuer,
-            _owner,
             _domain,
             now,
             expire,
@@ -170,7 +161,7 @@ contract DeCert is Ownable {
         certificateMap[_issuer][_serialID] = cert;
         certList.push(cert);
 
-        CertificateAdded(_issuer, _owner, now, _duration, _serialID);
+        CertificateAdded(_issuer, now, _duration, _serialID);
     }
 
     /// @dev Vote on whether or not a particular certificate is valid
@@ -207,10 +198,10 @@ contract DeCert is Ownable {
         Certificate storage cert = certificateMap[_issuer][_serialID];
 
         // require that it is a valid cert to prevent wasting tokens
-        require(cert.owner != address(0));
+        require(cert.issuer != address(0));
 
-        // transfer tokens to the owner of the contract
-        token.transferFrom(_voter, owner, _votes);
+        // transfer tokens to the decert contract
+        token.transferFrom(_voter, this, _votes);
 
         // increase the approval of the crowdsale to spend the
         // money in this contract
@@ -246,7 +237,6 @@ contract DeCert is Ownable {
         returns (
             address issuer,
             uint256 serialID,
-            address owner,
             uint256 validityStart,
             uint256 validityEnd,
             uint256 validVotes,
@@ -254,7 +244,6 @@ contract DeCert is Ownable {
         )
     {
         Certificate memory cert = certificateMap[_issuer][_serialID];
-        owner = cert.owner;
         issuer = cert.issuer;
         validityStart = cert.validityStart;
         validityEnd = cert.validityEnd;
@@ -271,7 +260,6 @@ contract DeCert is Ownable {
         returns (
             address issuer,
             uint256 serialID,
-            address owner,
             uint256 validityStart,
             uint256 validityEnd,
             uint256 validVotes,
@@ -279,7 +267,6 @@ contract DeCert is Ownable {
         )
     {
         Certificate memory cert = certList[_certID];
-        owner = cert.owner;
         issuer = cert.issuer;
         validityStart = cert.validityStart;
         validityEnd = cert.validityEnd;

@@ -46,11 +46,10 @@ contract('DeCert', async (accounts) => {
     assert.equal(web3.toBigNumber(outEmpty[0]), 0)
 
     // add a certificate to the chain
-    await dc.addCertificate(user2, "google.com", 0, 10)
+    await dc.addCertificate("google.com", 0, 100)
 
     const out = await dc.getCertificate(user1, 0)
     assert.equal(out[0], user1)
-    assert.equal(out[2], user2)
   })
 
   it('Test buying tokens', async () => {
@@ -99,8 +98,8 @@ contract('DeCert', async (accounts) => {
     const votedCert = await dc.getCertificateByID(0)
 
     // check the vote totals
-    assert(votedCert[5].equals(10), "Incorrect valid votes")
-    assert(votedCert[6].equals(20), "Incorrect invalid votes")
+    assert(votedCert[4].equals(10), "Incorrect valid votes")
+    assert(votedCert[5].equals(20), "Incorrect invalid votes")
 
     // make sure we're storing the votes correctly
     const firstVote = await dc.getVote(0)
